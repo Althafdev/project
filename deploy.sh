@@ -1,4 +1,8 @@
 #!/bin/bash
 
-docker login -u DOCKER_USERNAME -p DOCKER_PASSWORD
-docker push $Docker_BFLASK_IMAGE
+# Login to Docker Hub
+docker login -u althafhub -p Althaf01@
+
+# Push the Docker image to Docker Hub
+docker push althafhub/pyth
+
