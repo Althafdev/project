@@ -14,7 +14,10 @@ pipeline{
          stage('Deploy') {
              steps {
                     sh 'chmod +x deploy.sh'
+                  withCredentials([usernamePassword(credentialsId: 'Althaf', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
                     sh './deploy.sh'
+                 
+                  }  
             }
           }
         }
